@@ -61,13 +61,13 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.CustomViewHold
             gridItem.setState(Constants.STATE_OPEN);
             notifyItemChanged(position);
             return;
-        } else if (mCurrentIndex == -1) {
+        } else if (mLastIndex != position && mCurrentIndex == -1) {
             mCurrentIndex = position;
             gridItem.setState(Constants.STATE_OPEN);
             notifyItemChanged(position);
         }
 
-        if (mLastIndex != mCurrentIndex) {
+        if (mCurrentIndex != -1 && mLastIndex != mCurrentIndex) {
             if (mGridItemArrayList.get(mLastIndex).getNumber() == mGridItemArrayList.get(mCurrentIndex).getNumber()) {
                 mGridItemArrayList.get(mLastIndex).setState(Constants.STATE_OPEN_WIN);
                 mGridItemArrayList.get(mCurrentIndex).setState(Constants.STATE_OPEN_WIN);
