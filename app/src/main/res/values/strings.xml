@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Colour Memory</string>
+    <string name="lbl_high_scores">High Scores</string>
+    <string name="lbl_rank">Rank</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_score">Score</string>
+    <string name="title_name">Enter your name</string>
+    <string name="lbl_submit">Submit</string>
+    <string name="error_empty_name">Please enter your name.</string>
+</resources>
